@@ -1,0 +1,26 @@
+---
+title: 'Reproducible Research Assignment #1'
+author: "Neil Hepburn"
+date: "January 4, 2016"
+output: html_document
+---
+
+# Introduction
+
+# Loading and Processing the Data
+
+The data is stored in the current working directory as "activity.csv". 
+```{r,echo=TRUE}
+activity <- read.csv("activity.csv")
+
+# print out the names in the dataset 
+names(activity)
+
+# compute the mean number of steps
+steps.mean <- mean(activity$steps,na.rm=T)
+steps.mean
+hist(activity$steps,na.rm=T)
+```
+
+Producing the histogram.
+
